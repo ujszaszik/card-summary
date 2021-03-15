@@ -46,7 +46,7 @@ ext {
             core            : "com.squareup.retrofit2:retrofit:$version_retrofit",
             kotlinxConverter: "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$version_retrofit_kotlinx",
             moshiConverter  : "com.squareup.retrofit2:converter-moshi:$version_retrofit",
-            callAdapter     : "com.squareup.retrofit2:adapter-rxjava3:2.9.0",
+            callAdapter     : "com.squareup.retrofit2:adapter-rxjava3:$version_rx_call_adapter",
             logging         : "com.squareup.okhttp3:logging-interceptor:$version_logging_interceptor"
     ]
 
