@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="digital.wup.cardsummary.model.CardModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardBalanceVerticalStartGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/constraint_guide_default"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardBalanceVerticalEndGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/constraint_guide_default" />
+
+        <TextView
+            android:id="@+id/availableLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_text_available"
+            android:textColor="@color/blue_main"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintEnd_toStartOf="@+id/cardBalanceVerticalEndGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/availableBalanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue_main"
+            android:textSize="@dimen/text_size_highlight"
+            app:balanceHeaderDecimal="@{cardModel.availableBalance}"
+            app:layout_constraintEnd_toStartOf="@+id/cardBalanceVerticalEndGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/availableLabel" />
+
+        <TextView
+            android:id="@+id/currentBalanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_text_current_balance"
+            android:textColor="@color/balance_available_color"
+            android:textSize="@dimen/text_size_default"
+            app:layout_constraintStart_toStartOf="@+id/cardBalanceVerticalStartGuideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentBalanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/balance_current_color"
+            android:textSize="@dimen/text_size_highlight"
+            app:balanceHeaderDecimal="@{cardModel.currentBalance}"
+            app:layout_constraintStart_toStartOf="@+id/cardBalanceVerticalStartGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/currentBalanceLabel" />
+
+        <digital.wup.cardsummary.details.header.BalanceChartView
+            android:id="@+id/balanceChartView"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            app:balanceChartCard="@{cardModel}"
+            app:layout_constraintEnd_toEndOf="@+id/cardBalanceVerticalEndGuideline"
+            app:layout_constraintStart_toStartOf="@+id/cardBalanceVerticalStartGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/currentBalanceValue" />
+
+        <LinearLayout
+            android:id="@+id/reservationMarkerLayout"
+            style="@style/reservationMarkingLayoutStyle"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/reservationsRow"
+            app:layout_constraintEnd_toStartOf="@+id/cardBalanceVerticalStartGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/reservationsRow" />
+
+        <digital.wup.cardsummary.common.CardMonetaryRow
+            android:id="@+id/reservationsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            app:currencyValue="@{cardModel.currency}"
+            app:layout_constraintEnd_toEndOf="@+id/cardBalanceVerticalEndGuideline"
+            app:layout_constraintStart_toStartOf="@+id/cardBalanceVerticalStartGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/balanceChartView"
+            app:monetaryLabel="@string/label_text_reservations"
+            app:monetaryRowValue="@{cardModel.reservations}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/overviewFragment"
+        android:icon="@drawable/ic_credit_card"
+        android:title="@string/label_menu_cards" />
+    <item
+        android:id="@+id/transactionsFragment"
+        android:icon="@drawable/ic_transaction"
+        android:title="@string/label_menu_transactions" />
+    <item
+        android:id="@+id/statementsFragment"
+        android:icon="@drawable/ic_statement"
+        android:title="@string/label_menu_statements" />
+    <item
+        android:id="@+id/moreFragment"
+        android:icon="@drawable/ic_more"
+        android:title="@string/label_menu_more" />
+
+</menu>

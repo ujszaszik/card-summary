@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="digital.wup.cardsummary.model.CardModel" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/summaryFragmentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:context=".summary.SummaryFragment">
+
+            <digital.wup.cardsummary.summary.slider.CardSlider
+                android:id="@+id/cardSlider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_default" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="@dimen/zero" />
+
+            <digital.wup.cardsummary.summary.balance.CardBalanceView
+                android:id="@+id/balanceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:cardModel="@{cardModel}" />
+
+            <digital.wup.cardsummary.summary.overview.CardOverviewLayout
+                android:id="@+id/cardOverviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_default"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:cardModel="@{cardModel}" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/detailsButton"
+                style="@style/defaultButtonStyle"
+                android:text="@string/label_text_details" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

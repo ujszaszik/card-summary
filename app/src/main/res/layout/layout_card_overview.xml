@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="digital.wup.cardsummary.model.CardModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <digital.wup.cardsummary.common.CardMonetaryRow
+            android:id="@+id/currentBalanceRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:currencyValue="@{cardModel.currency}"
+            app:monetaryLabel="@string/label_text_current_balance"
+            app:monetaryRowValue="@{cardModel.currentBalance}" />
+
+        <digital.wup.cardsummary.common.CardMonetaryRow
+            android:id="@+id/minPaymentRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:currencyValue="@{cardModel.currency}"
+            app:monetaryLabel="@string/label_text_min_payment"
+            app:monetaryRowValue="@{cardModel.minPayment}" />
+
+        <digital.wup.cardsummary.common.CardDetailRow
+            android:id="@+id/reservationsRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:detailLabel="@string/label_text_due_date"
+            app:detailRowDateValue="@{cardModel.dueDate}" />
+
+
+    </LinearLayout>
+</layout>

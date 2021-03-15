@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="digital.wup.cardsummary.model.CardModel" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/detailFragmentScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".details.DetailsFragment">
+
+            <digital.wup.cardsummary.details.header.BalanceHeaderView
+                android:id="@+id/balanceHeaderView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:balanceHeaderCard="@{cardModel}" />
+
+            <digital.wup.cardsummary.details.overview.BalanceOverviewLayout
+                android:id="@+id/balanceOverviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                app:balanceOverviewCard="@{cardModel}" />
+
+            <digital.wup.cardsummary.details.account.AccountDetailView
+                android:id="@+id/accountDetailView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                app:accountDetailCard="@{cardModel}" />
+
+            <digital.wup.cardsummary.details.maincard.MainCardDetailView
+                android:id="@+id/mainCardDetailView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                app:mainCardDetailCard="@{cardModel}" />
+
+            <digital.wup.cardsummary.details.supplementary.SupplementaryCardDetailView
+                android:id="@+id/supplementaryCardDetailView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                app:supplementaryCardDetailCard="@{cardModel}" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

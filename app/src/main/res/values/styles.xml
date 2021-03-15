@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="badgeStyle">@style/badgeStyle</item>
+    </style>
+
+    <style name="badgeStyle" parent="Widget.MaterialComponents.Badge">
+        <item name="backgroundColor">@color/orange</item>
+    </style>
+
+    <style name="defaultButtonStyle" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:layout_width">@dimen/width_details_button</item>
+        <item name="android:layout_height">@dimen/height_details_button</item>
+        <item name="android:layout_marginTop">@dimen/margin_default</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/blue_light</item>
+        <item name="android:textSize">@dimen/text_size_default</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="strokeColor">@color/blue_light</item>
+        <item name="strokeWidth">@dimen/stroke_width_default</item>
+    </style>
+
+    <style name="detailsTitleText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_details_title_text</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_default</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="sumBalanceCardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_card_view</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">@dimen/margin_tiny</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_tiny</item>
+        <item name="android:backgroundTint">@color/balance_current_color</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius_default</item>
+    </style>
+
+    <style name="availableBalanceCardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/height_available_balance_card_view</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:backgroundTint">@color/blue_main</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius_default</item>
+    </style>
+
+    <style name="dividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_divider</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+        <item name="android:background">@color/grey_divider</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="detailRowLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_small</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="reservationMarkingLayoutStyle">
+        <item name="android:layout_height">@dimen/height_reservation_marking_layout</item>
+        <item name="android:layout_width">@dimen/width_reservation_marking_layout</item>
+        <item name="android:layout_marginBottom">@dimen/margin_default</item>
+        <item name="android:background">@color/balance_pending_color</item>
+    </style>
+
+</resources>

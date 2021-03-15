@@ -1,0 +1,90 @@
+apply from: 'versions.gradle'
+
+ext {
+
+    androidExtensionLibs = [
+            appCompat       : "androidx.appcompat:appcompat:$version_app_compat",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$version_constraint_layout",
+            idlingResource  : "androidx.test.espresso:espresso-idling-resource:$version_espresso",
+            fragmentKtx     : "androidx.fragment:fragment-ktx:$version_fragment_ktx",
+            legacySupport   : "androidx.legacy:legacy-support-v4:$version_legacy_support",
+            material        : "com.google.android.material:material:$version_material",
+            preferenceKtx   : "androidx.preference:preference-ktx:$version_preference",
+            uiAutomator     : "com.android.support.test.uiautomator:uiautomator-v18:$version_ui_automator",
+            viewPager       : "androidx.viewpager2:viewpager2:$version_view_pager",
+            xCore           : "androidx.core:core-ktx:$version_x_core",
+    ]
+
+    kotlinLibs = [
+            kotlin      : "org.jetbrains.kotlin:kotlin-stdlib:$version_kotlin",
+            seralization: "org.jetbrains.kotlinx:kotlinx-serialization-json:$version_kotlinx"
+    ]
+
+    navigationLibs = [
+            fragment: "androidx.navigation:navigation-fragment-ktx:$version_navigation",
+            ui      : "androidx.navigation:navigation-ui-ktx:$version_navigation"
+    ]
+
+    rxLibs = [
+            rxJava   : "io.reactivex.rxjava3:rxjava:$version_rx",
+            rxAndroid: "io.reactivex.rxjava3:rxandroid:$version_rx",
+            rxKotlin : "io.reactivex.rxjava3:rxkotlin:$version_rx"
+    ]
+
+    lifecycleExtensionLibs = [
+            lifeCycle: "androidx.lifecycle:lifecycle-extensions:$version_lifecycle",
+            liveData : "androidx.lifecycle:lifecycle-livedata-ktx:$version_lifecycle",
+            viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle"
+    ]
+
+    navigationComponentLibs = [
+            ui : "androidx.navigation:navigation-ui-ktx:$version_navigation",
+            ktx: "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    ]
+
+    retrofitLibs = [
+            core            : "com.squareup.retrofit2:retrofit:$version_retrofit",
+            kotlinxConverter: "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$version_retrofit_kotlinx",
+            moshiConverter  : "com.squareup.retrofit2:converter-moshi:$version_retrofit",
+            callAdapter     : "com.squareup.retrofit2:adapter-rxjava3:2.9.0",
+            logging         : "com.squareup.okhttp3:logging-interceptor:$version_logging_interceptor"
+    ]
+
+    paperLibs = [
+            paperDB: "io.paperdb:paperdb:$version_paper",
+    ]
+
+    hiltLibs = [
+            android  : "com.google.dagger:hilt-android:$version_dagger_hilt",
+            viewModel: "androidx.hilt:hilt-lifecycle-viewmodel:$version_dagger_hilt_ext"
+    ]
+
+    hiltKapt = [
+            android : "com.google.dagger:hilt-android-compiler:$version_dagger_hilt",
+            compiler: "androidx.hilt:hilt-compiler:$version_dagger_hilt_ext"
+    ]
+
+    testLibs = [
+            archCore: "androidx.arch.core:core-testing:$version_core_test",
+            jUnit   : "junit:junit:$version_junit",
+            mockito : "org.mockito:mockito-core:$version_mockito",
+            liveData: "com.jraska.livedata:testing-ktx:$version_livedata_testing"
+    ]
+
+    androidTestLibs = [
+            jUnit     : "androidx.test.ext:junit:$version_junit_ext",
+            espresso  : "androidx.test.espresso:espresso-core:$version_espresso",
+            liveData  : "com.jraska.livedata:testing-ktx:$version_livedata_testing",
+            navigation: "androidx.navigation:navigation-testing:$version_navigation",
+            testRules : "androidx.test:rules:$version_test_rules",
+            hilt      : "com.google.dagger:hilt-android-testing:$version_hilt_testing",
+    ]
+
+    kaptAndroidTestLibs = [
+            hilt: "com.google.dagger:hilt-android-compiler:$version_hilt_testing"
+    ]
+
+    debugTestLibs = [
+            fragment: "androidx.fragment:fragment-testing:$version_fragment_test"
+    ]
+}

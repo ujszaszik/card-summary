@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    COMMON-->
+    <dimen name="zero">0dp</dimen>
+    <dimen name="match_constraint">0dp</dimen>
+
+    <!--    DEFAULT -->
+    <dimen name="card_corner_radius_default">8dp</dimen>
+    <dimen name="constraint_guide_default">15dp</dimen>
+    <dimen name="elevation_default">2dp</dimen>
+    <dimen name="stroke_width_default">1dp</dimen>
+
+    <!--    MARGIN-->
+    <dimen name="margin_pager">48dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+
+    <!--    SIZE-->
+    <dimen name="height_available_balance_card_view">16dp</dimen>
+    <dimen name="height_balance_chart">48dp</dimen>
+    <dimen name="height_bottom_nav">54dp</dimen>
+    <dimen name="height_card_view">8dp</dimen>
+    <dimen name="height_details_title_text">18dp</dimen>
+    <dimen name="height_divider">1dp</dimen>
+    <dimen name="height_details_button">54dp</dimen>
+    <dimen name="width_details_button">180dp</dimen>
+    <dimen name="height_reservation_marking_layout">64dp</dimen>
+    <dimen name="width_reservation_marking_layout">8dp</dimen>
+    <dimen name="height_view_pager">320dp</dimen>
+    <dimen name="size_arrow">32dp</dimen>
+
+    <!--    TEXT SIZE-->
+    <dimen name="text_size_huge">28sp</dimen>
+    <dimen name="text_size_highlight">24sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_detail_row">19sp</dimen>
+    <dimen name="text_size_default">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="size_navigation_arrow">28dp</dimen>
+    <dimen name="text_size_toolbar_title">20sp</dimen>
+    <dimen name="size_image_error">96dp</dimen>
+
+</resources>

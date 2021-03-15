@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    INTEGER -->
+    <integer name="one">1</integer>
+    <integer name="two">2</integer>
+    <integer name="three">3</integer>
+
+    <integer name="arrow_viewport">28</integer>
+    <integer name="chart_animation_time">1000</integer>
+    <integer name="toolbar_view_center_margin">-20</integer>
+    <integer name="toolbar_view_start_margin">120</integer>
+
+    <!--    FLOATING -->
+
+    <item name="half" format="float" type="dimen">0.5</item>
+</resources>

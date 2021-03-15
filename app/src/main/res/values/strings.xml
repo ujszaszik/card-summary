@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">CardSummary</string>
+
+    <!--    TITLE -->
+
+    <string name="label_title_details">@string/label_text_details</string>
+    <string name="label_title_premium_card">Premium Card</string>
+
+    <!--    MENU -->
+    <string name="label_menu_cards">Cards</string>
+    <string name="label_menu_transactions">Transactions</string>
+    <string name="label_menu_statements">Statements</string>
+    <string name="label_menu_more">More</string>
+
+    <!--    TEXT -->
+    <string name="label_text_available">Available</string>
+    <string name="label_text_account_details">Account Details</string>
+    <string name="label_text_account_limit">Card account limit</string>
+    <string name="label_text_account_number">Card account number</string>
+    <string name="label_text_balance_overview">Balance overview</string>
+    <string name="label_text_cardholder_name">Cardholder name</string>
+    <string name="label_text_card_number">Card number</string>
+    <string name="label_text_current_balance">Current balance</string>
+    <string name="label_text_balance_carried">Balance carried over from last statement</string>
+    <string name="label_text_details">Details</string>
+    <string name="label_text_due_date">Due date</string>
+    <string name="label_text_last_repayment">Your last re-payment</string>
+    <string name="label_text_main_card">Main card</string>
+    <string name="label_text_min_payment">Min. payment</string>
+    <string name="label_text_premium_card">Premium Card</string>
+    <string name="label_text_supplementary_card">Supplementary card</string>
+    <string name="label_text_reservations">Reservations/Pending (sum)</string>
+    <string name="label_text_total_spendings">Total spendings since last statement</string>
+
+    <!--    MESSAGE <-->
+    <string name="label_unable_to_fetch">Unable to fetch card data</string>
+    <string name="label_please_try_again">Please try again!</string>
+    <string name="label_unexpected_error">An unexpected error occurred</string>
+    <string name="label_not_connected">Unable to connect to the Internet</string>
+    <string name="label_connect_and_try_again">Please connect and try again</string>
+    <string name="label_loading_cards">Loading cards ...</string>
+
+    <!--    MISCELLANEOUS -->
+
+    <string name="definition_type_drawable">drawable</string>
+    <string name="card_image_prefix">cccard</string>
+
+</resources>

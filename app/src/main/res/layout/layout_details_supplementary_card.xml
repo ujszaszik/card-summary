@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="digital.wup.cardsummary.model.CardModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/supplementaryCardTitleText"
+            style="@style/detailsTitleText"
+            android:text="@string/label_text_supplementary_card" />
+
+        <digital.wup.cardsummary.common.CardDetailRow
+            android:id="@+id/supplementaryCardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:detailLabel="@string/label_text_card_number"
+            app:detailRowCardNumberValue="@{cardModel.cardNumber}" />
+
+        <digital.wup.cardsummary.common.CardDetailRow
+            android:id="@+id/supplementaryCardHolderName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:detailLabel="@string/label_text_cardholder_name"
+            app:detailRowValue="@{cardModel.cardHolderName}" />
+
+    </LinearLayout>
+</layout>

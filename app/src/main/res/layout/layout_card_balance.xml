@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardBalanceHorizontalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/half" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/cardBalanceVerticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/constraint_guide_default" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sumBalanceView"
+            style="@style/sumBalanceCardViewStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cardBalanceHorizontalGuideline" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/availableBalanceView"
+            style="@style/availableBalanceCardViewStyle"
+            app:layout_constraintEnd_toEndOf="@+id/balanceValue"
+            app:layout_constraintTop_toTopOf="@+id/cardBalanceHorizontalGuideline" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/elevation_default"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/sumBalanceView"
+            app:layout_constraintEnd_toEndOf="@id/cardBalanceVerticalGuideline"
+            app:layout_constraintStart_toStartOf="@id/cardBalanceVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@id/sumBalanceView"
+            app:srcCompat="@drawable/ic_error_red" />
+
+        <TextView
+            android:id="@+id/availableLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:text="@string/label_text_available"
+            android:textColor="@color/blue_main"
+            android:textSize="@dimen/text_size_large"
+            app:layout_constraintBottom_toTopOf="@id/cardBalanceHorizontalGuideline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/balanceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:textColor="@color/blue_main"
+            android:textSize="@dimen/text_size_huge"
+            app:layout_constraintBaseline_toBaselineOf="@+id/availableLabel"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Theme.CardSummary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:textAlignment="center"
+            app:popupTheme="@style/Widget.AppCompat.PopupMenu.Overflow">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/navigationArrow"
+                    android:layout_width="@dimen/size_navigation_arrow"
+                    android:layout_height="@dimen/size_navigation_arrow"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_arrow_navigation" />
+
+                <TextView
+                    android:id="@+id/toolbarTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_text_premium_card"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/blue_main"
+                    android:textSize="@dimen/text_size_toolbar_title"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</layout>

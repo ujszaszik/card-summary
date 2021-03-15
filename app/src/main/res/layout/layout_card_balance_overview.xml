@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="cardModel"
+            type="digital.wup.cardsummary.model.CardModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/balanceOverviewTitleText"
+            style="@style/detailsTitleText"
+            android:layout_width="match_parent"
+            android:text="@string/label_text_balance_overview" />
+
+        <digital.wup.cardsummary.common.CardMonetaryRow
+            android:id="@+id/balanceCarriedRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:currencyValue="@{cardModel.currency}"
+            app:monetaryLabel="@string/label_text_balance_carried"
+            app:monetaryRowValue="@{cardModel.balanceCarriedOverFromLastStatement}" />
+
+        <digital.wup.cardsummary.common.CardMonetaryRow
+            android:id="@+id/spendingSinceLastStatementRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:currencyValue="@{cardModel.currency}"
+            app:monetaryLabel="@string/label_text_total_spendings"
+            app:monetaryRowValue="@{cardModel.spendingsSinceLastStatement}" />
+
+        <digital.wup.cardsummary.common.CardDetailRow
+            android:id="@+id/lastRepayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:detailLabel="@string/label_text_last_repayment"
+            app:detailRowDateValue="@{cardModel.yourLastRepayment}" />
+
+
+    </LinearLayout>
+</layout>

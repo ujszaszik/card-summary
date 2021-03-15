@@ -1,0 +1,30 @@
+buildscript {
+    apply from: 'versions.gradle'
+    apply from: 'dependencies.gradle'
+
+
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://oss.jfrog.org/libs-snapshot" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$version_gradle"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$version_kotlin"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$version_kotlin"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$version_navigation"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$version_dagger_hilt"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
